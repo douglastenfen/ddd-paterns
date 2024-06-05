@@ -6,8 +6,8 @@ describe('Order unit tests', () => {
     expect(() => new Order('', '1', [])).toThrow('ID is required');
   });
 
-  it('should throw error when costumer ID is empty', () => {
-    expect(() => new Order('1', '', [])).toThrow('Costumer ID is required');
+  it('should throw error when customer ID is empty', () => {
+    expect(() => new Order('1', '', [])).toThrow('Customer ID is required');
   });
 
   it('should throw error when items are empty', () => {
