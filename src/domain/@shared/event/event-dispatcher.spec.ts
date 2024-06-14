@@ -1,12 +1,12 @@
-import Address from '../../entity/address';
-import Customer from '../../entity/customer';
-import CustomerAddressChangedEvent from '../customer/customer-address-changed.event';
-import CustomerCreatedEvent from '../customer/customer-created.event';
-import EnviaConsoleLog1Handler from '../customer/handler/envia-console-log-1.handler';
-import EnviaConsoleLog2Handler from '../customer/handler/envia-console-log-2.handler';
-import EnviaConsoleLogHandler from '../customer/handler/envia-console-log.handle';
-import SendEmailWhenProductIsCreatedHandler from '../product/handler/send-email-when-product-is-created.handler';
-import ProductCreatedEvent from '../product/product-created.event';
+import Customer from '../../customer/entity/customer';
+import CustomerAddressChangedEvent from '../../customer/event/customer-address-changed.event';
+import CustomerCreatedEvent from '../../customer/event/customer-created.event';
+import EnviaConsoleLog1Handler from '../../customer/event/handler/envia-console-log-1.handler';
+import EnviaConsoleLog2Handler from '../../customer/event/handler/envia-console-log-2.handler';
+import EnviaConsoleLogHandler from '../../customer/event/handler/envia-console-log.handle';
+import Address from '../../customer/value-object/address';
+import SendEmailWhenProductIsCreatedHandler from '../../product/event/handler/send-email-when-product-is-created.handler';
+import ProductCreatedEvent from '../../product/event/product-created.event';
 import EventDispatcher from './event-dispatcher';
 
 describe('Domain events tests', () => {
