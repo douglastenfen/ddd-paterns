@@ -1,4 +1,4 @@
-import ProductFactory from "./product.factory";
+import ProductFactory from './product.factory';
 
 describe('Product factory unit tests', () => {
   it('should create a product type A', () => {
@@ -17,5 +17,11 @@ describe('Product factory unit tests', () => {
     expect(product.name).toBe('product b');
     expect(product.price).toBe(20);
     expect(product.constructor.name).toBe('ProductB');
+  });
+
+  it('should throw an error when creating an invalid product type', () => {
+    expect(() => ProductFactory.create('c', 'product c', 10)).toThrow(
+      'Invalid product type'
+    );
   });
 });
